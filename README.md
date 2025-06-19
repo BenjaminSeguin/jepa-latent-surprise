@@ -79,5 +79,7 @@ If you're interested in collaboration or supervision, feel free to open an issue
 
 ## 🧑‍💻 Author
 Benjamin Séguin
+
 HEC Montréal, Quantitative Finance & AI
+
 benjamin.seguin@hec.ca
