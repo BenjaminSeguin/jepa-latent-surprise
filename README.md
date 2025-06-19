@@ -35,16 +35,16 @@ This is **not yet a JEPA**, but a **pre-JEPA** phase:
 ## 📁 Folder structure
 
 data/
-├── raw/ # .docx earnings call transcripts
-├── annotated/ # per-paragraph zero-shot classification
-├── processed/ # structured JSONs (intro/body/qna)
-├── embeddings/ # .npz embeddings
-├── results/ # JSONs with surprise scores
+  ├── raw/ # .docx earnings call transcripts
+  ├── annotated/ # per-paragraph zero-shot classification
+  ├── processed/ # structured JSONs (intro/body/qna)
+  ├── embeddings/ # .npz embeddings
+  ├── results/ # JSONs with surprise scores
 src/
-├── zero_shot_parser.py
-├── assemble_sections.py
-├── generate_embeddings.py
-├── compute_surprise.py
+  ├── zero_shot_parser.py
+  ├── assemble_sections.py
+  ├── generate_embeddings.py
+  ├── compute_surprise.py
 
 ---
 
