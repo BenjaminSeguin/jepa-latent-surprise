@@ -3,15 +3,15 @@ from transformers import pipeline
 from pathlib import Path
 import json
 
-# === Paramètres ===
-DOCX_DIR = Path("data/raw")  # Dossier avec tes .docx
+# === Parameters ===
+DOCX_DIR = Path("data/raw")
 OUTPUT_DIR = Path("data/annotated")
 OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
-# Modèle HuggingFace
+# HuggingFace Model
 classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
-# Labels plus explicites
+# More Explicit Labels
 label_map = {
     "opening disclaimer": "intro",
     "prepared remarks": "body",
@@ -19,7 +19,6 @@ label_map = {
 }
 labels = list(label_map.keys())
 
-# Taille des blocs
 BLOCK_SIZE = 4
 
 def extract_paragraphs(docx_path):
@@ -36,7 +35,7 @@ def split_into_blocks(paragraphs, size=4):
 
 def is_meta(text):
     """
-    Règle simple pour détecter un paragraphe 'meta'
+    Simple heuristic to identify meta blocks
     """
     if len(text.split()) <= 3:
         return True
@@ -65,7 +64,7 @@ def classify_blocks(blocks):
 
 # === Main processing ===
 for docx_file in DOCX_DIR.glob("*.docx"):
-    print(f"🗂️ Processing {docx_file.name}")
+    print(f"Processing {docx_file.name}")
     paragraphs = extract_paragraphs(docx_file)
     blocks = split_into_blocks(paragraphs, size=BLOCK_SIZE)
     annotated = classify_blocks(blocks)
@@ -74,4 +73,4 @@ for docx_file in DOCX_DIR.glob("*.docx"):
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(annotated, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Saved to {out_path}")
+    print(f"Saved to {out_path}")
