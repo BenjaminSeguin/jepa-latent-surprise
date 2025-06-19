@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 # Read JSON file
-with open("c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw_json/apple_earnings_2025.json", encoding="utf-8") as f:
+with open("c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/processed/apple_earnings_2025.json", encoding="utf-8") as f:
     data = json.load(f)
 
 # Fast and reliable model for embeddings
@@ -16,7 +16,7 @@ body_emb = model.encode(data["body"])
 qna_emb = model.encode(data["qna"])
 
 # Embedding file path
-embedding_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/processed/embeddings_appleq2_2025.npz"
+embedding_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/embeddings/embeddings_appleq2_2025.npz"
 
 # Créer le dossier s’il n’existe pas
 os.makedirs(os.path.dirname(embedding_path), exist_ok=True)

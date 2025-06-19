@@ -8,9 +8,9 @@ def extract_text(docx_path):
     return "\n".join(paragraphs)
 
 # File paths
-intro_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw_docx/intro_apple_q2_2025.docx"
-body_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw_docx/body_apple_q2_2025.docx"
-qna_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw_docx/qna_apple_q2_2025.docx"
+intro_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw/intro_apple_q2_2025.docx"
+body_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw/body_apple_q2_2025.docx"
+qna_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw/qna_apple_q2_2025.docx"
 
 # Extract text from each section
 intro_text = extract_text(intro_path)
@@ -27,7 +27,7 @@ earnings_data = {
 }
 
 # Output to JSON file
-output_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/raw_json/apple_earnings_2025.json"
+output_path = "c:/Users/benj0/OneDrive - HEC Montréal/Desktop/jepa-latent-surprise/data/processed/apple_earnings_2025.json"
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(earnings_data, f, indent=2, ensure_ascii=False)
 
