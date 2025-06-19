@@ -59,7 +59,7 @@ src/
 }
 ```
 
-🚀 Roadmap
+## 🚀 Roadmap
 ✅ Pre-JEPA dissociation scoring (this repo)
 
 🔜 Trainable JEPA to predict Q&A latent space from intro+body
@@ -70,11 +70,11 @@ src/
 
 🔜 Extension to generative hallucination: “what questions should have been asked?”
 
-📚 Citation & academic intent
+## 📚 Citation & academic intent
 This project is part of a prospective research thesis (CIFRE) on representation learning and surprise detection in financial communication, using self-supervised predictive architectures inspired by JEPA.
 If you're interested in collaboration or supervision, feel free to open an issue or contact me directly.
 
-🧑‍💻 Author
+## 🧑‍💻 Author
 Benjamin Séguin
 HEC Montréal, Quantitative Finance & AI
 benjamin.seguin@hec.ca
