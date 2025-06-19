@@ -57,6 +57,7 @@ src/
   "surprise_body_qna": 0.816,
   "surprise_intro_body": 0.787
 }
+```
 
 🚀 Roadmap
 ✅ Pre-JEPA dissociation scoring (this repo)
